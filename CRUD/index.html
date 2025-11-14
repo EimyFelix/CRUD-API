@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con PHP y Fetch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="text-center">
+                            <i class="fas fa-box me-2"></i>Gestión de Productos
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Formulario -->
+                        <form id="formProducto">
+                            <input type="hidden" id="productoId" name="id">
+                            <input type="hidden" name="Accion" id="accion" value="Guardar">
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="codigo" class="form-label">Código *</label>
+                                        <input type="text" class="form-control" id="codigo" name="codigo" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="producto" class="form-label">Producto *</label>
+                                        <input type="text" class="form-control" id="producto" name="producto" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="precio" class="form-label">Precio *</label>
+                                        <input type="number" step="0.01" class="form-control" id="precio" name="precio" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="cantidad" class="form-label">Cantidad *</label>
+                                        <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="button" class="btn btn-secondary me-md-2" onclick="limpiarFormulario()">
+                                    <i class="fas fa-broom me-1"></i>Limpiar
+                                </button>
+                                <button type="submit" class="btn btn-success" id="btnSubmit">
+                                    <i class="fas fa-save me-1"></i>Registrar Producto
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <hr>
+                        
+                        <!-- Búsqueda -->
+                        <div class="row mb-3">
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="buscarTermino" placeholder="Buscar productos...">
+                                    <button class="btn btn-outline-primary" type="button" onclick="buscarProductos()">
+                                        <i class="fas fa-search me-1"></i>Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tabla de productos -->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaProductos">
+                                    <!-- Mensaje inicial cuando no hay productos -->
+                                    <tr>
+                                        <td colspan="5" class="text-center">No hay productos registrados</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
