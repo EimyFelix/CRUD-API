@@ -422,7 +422,7 @@ formulario.addEventListener('submit', async function(e) {
 
 | Campo | Información |
 |-------|-------------|
-| 👤 **Nombre Completo** | [Eimy Félix 8-1010-2376 / Amanda Green 8-1023-1761] |
+| 👤 **Nombre Completo** | Eimy Félix 8-1010-2376 / Amanda Green 8-1023-1761 |
 | 📧 **Correo Institucional** | eimy.felix@utp.ac.pa / amanda.green@utp.ac.pa|
 | 📚 **Curso** | Ingeniería Web |
 | 👩‍🏫 **Instructora** | Ing. Irina Fong |
@@ -458,14 +458,6 @@ formulario.addEventListener('submit', async function(e) {
     <p>📅 <strong>Fecha de Entrega:</strong> 14 de noviembre de 2025</p>
     <p>📝 <strong>Modalidad:</strong> Laboratorio Práctico - Grupal</p>
     
-    <br>
-    
-    <img src="https://img.shields.io/badge/Estado-Entregado-success?style=for-the-badge" alt="Estado Entregado">
-    <img src="https://img.shields.io/badge/Calificación-Pendiente-yellow?style=for-the-badge" alt="Calificación Pendiente">
-    
-    <br><br>
-    
-    <p><strong>🎯 "Implementación exitosa de sistema CRUD con tecnologías web modernas"</strong></p>
 </div>
 
 ---
