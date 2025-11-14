@@ -260,7 +260,7 @@ SELECT * FROM productos ORDER BY fecha_creacion DESC;
 ## 🖼️ Resultado del Laboratorio
 
 ### 🎨 Interfaz Principal del Formulario
-![Formulario Principal](imagenes/formulario-principal.png)
+![Formulario Principal](imagenes/FormularioPrincipal.png)
 
 *Interfaz desarrollada con Bootstrap 5 que incluye todos los campos necesarios para gestionar productos con validación en tiempo real.*
 
